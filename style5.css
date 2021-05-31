@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: slide 16s ease-in-out infinite;
+}
+.search-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -600%);
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: rgba(0,0,0,0.5);
+    background: rgba(225,225,225,0.1);
+    overflow: hidden;
+    border-top: 1px solid rgba(225,225,225,0.5);
+    border-left: 1px solid rgba(225,225,225,0.5);
+    backdrop-filter: blur(5px);
+    animation: fadein 7s ease-out;
+}
+.search-box:hover > .search-txt {
+    width: 240px;
+    padding: 0 6px;
+}  
+.search-btn {
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.search-btn > i {
+    font-size: 30px;
+} 
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    font-weight: bold;
+}
+ ::placeholder{
+    color: black;
+}
+div.item{
+    position: relative;
+    opacity:0.9;
+    border-radius:15px;
+    padding:5px 5px;
+    margin: 20px 100px 0 100px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: rgba(0,0,0,0.5);
+    background: rgba(225,225,225,0.1);
+    overflow: hidden;
+    border-top: 1px solid rgba(225,225,225,0.5);
+    border-left: 1px solid rgba(225,225,225,0.5);
+    backdrop-filter: blur(7px);
+    animation: fadein 3s ease-out;
+}
+div.wrapper{
+    margin: 80px 0 0 0;
+}
+footer{
+    position: absolute;
+    transform: translate(800%, 3050%);
+    font-family: 'Poppins', sans-serif;
+    color: grey;
+}
+@keyframes fadein {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes slide {
+    0%,100%{
+        background-image: url(img1.jpg);
+    }
+    25%{
+        background-image: url(img2.jpg);
+    }
+    50%{
+        background-image: url(img3.jpg);
+    }
+    75%{
+        background-image: url(img4.jpg); 
+    }
+}
